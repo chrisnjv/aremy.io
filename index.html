@@ -4,15 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Feliz 15 años Aremys</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display :wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Lora', serif;
       background-color: #fffaf0;
@@ -20,7 +18,6 @@
       text-align: center;
       overflow-x: hidden;
     }
-
     /* Portada */
     .cover {
       height: 100vh;
@@ -32,7 +29,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .title-container {
       position: relative;
       padding: 20px;
@@ -40,12 +36,10 @@
       border-radius: 15px;
       animation: borderPulse 3s infinite ease-in-out;
     }
-
     @keyframes borderPulse {
       0%, 100% { border-color: #d4af37; }
       50% { border-color: #f0c05a; }
     }
-
     .cover h1 {
       font-family: 'Playfair Display', serif;
       font-size: 4.5rem;
@@ -53,18 +47,15 @@
       text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
       margin-bottom: 20px;
     }
-
     .cover h1 span {
       display: inline-block;
       opacity: 0;
       animation: fadeInDown 0.8s ease-in-out forwards;
     }
-
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
     .btn {
       padding: 12px 30px;
       font-size: 1.2rem;
@@ -76,13 +67,11 @@
       transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
       z-index: 10;
     }
-
     .btn:hover {
       background-color: #f0c05a;
       transform: scale(1.05);
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
     }
-
     /* Animaciones de estrellas */
     .star {
       position: absolute;
@@ -92,19 +81,16 @@
       clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
       animation: twinkle 4s infinite ease-in-out;
     }
-
     .star:nth-child(even) {
       width: 12px;
       height: 12px;
       animation-duration: 5s;
     }
-
     @keyframes twinkle {
       0% { transform: translateY(100vh) scale(0.5); opacity: 0.3; }
       50% { opacity: 1; }
       100% { transform: translateY(-100vh) scale(1); opacity: 0.3; }
     }
-
     /* Confeti dinámico */
     .confetti-explosion {
       position: fixed;
@@ -114,12 +100,10 @@
       pointer-events: none;
       animation: confettiFall 2s ease-out forwards;
     }
-
     @keyframes confettiFall {
       0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
       100% { transform: translate(var(--x), 100vh) rotate(720deg); opacity: 0; }
     }
-
     /* Contenido */
     .content {
       max-width: 900px;
@@ -131,7 +115,6 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       display: none;
     }
-
     .message {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
@@ -139,7 +122,6 @@
       margin: 20px 0;
       line-height: 1.4;
     }
-
     /* Estilo de la foto */
     .photo-container {
       margin: 20px 0;
@@ -148,7 +130,6 @@
       animation: fadeIn 1s ease-in-out forwards;
       animation-delay: 0.5s;
     }
-
     .photo-container img {
       max-width: 300px;
       width: 100%;
@@ -156,12 +137,10 @@
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: scale(0.9); }
       100% { opacity: 1; transform: scale(1); }
     }
-
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
@@ -169,7 +148,6 @@
       margin: 30px 0 15px;
       position: relative;
     }
-
     .section-title::after {
       content: '';
       width: 60px;
@@ -178,7 +156,6 @@
       display: block;
       margin: 10px auto;
     }
-
     /* Formulario */
     .guest-form {
       display: flex;
@@ -187,7 +164,6 @@
       gap: 15px;
       margin: 20px 0;
     }
-
     .guest-form input, .guest-form textarea {
       width: 100%;
       max-width: 600px;
@@ -199,17 +175,14 @@
       background: #fffaf0;
       transition: border-color 0.3s;
     }
-
     .guest-form input:focus, .guest-form textarea:focus {
       border-color: #f0c05a;
       outline: none;
     }
-
     .guest-form textarea {
       height: 120px;
       resize: vertical;
     }
-
     .guest-form button {
       padding: 12px 30px;
       font-size: 1.1rem;
@@ -220,12 +193,10 @@
       cursor: pointer;
       transition: background-color 0.3s, transform 0.2s;
     }
-
     .guest-form button:hover {
       background-color: #f0c05a;
       transform: scale(1.05);
     }
-
     /* Modal para contraseña */
     .modal {
       display: none;
@@ -239,7 +210,6 @@
       align-items: center;
       z-index: 100;
     }
-
     .modal-content {
       background: #fffaf0;
       padding: 30px;
@@ -252,13 +222,11 @@
       max-height: 80vh;
       overflow-y: auto;
     }
-
     .modal-content h2 {
       font-family: 'Playfair Display', serif;
       color: #d4af37;
       margin-bottom: 20px;
     }
-
     .modal-content input {
       width: 100%;
       padding: 10px;
@@ -267,7 +235,6 @@
       border-radius: 10px;
       font-family: 'Lora', serif;
     }
-
     .modal-content button {
       padding: 10px 20px;
       background-color: #d4af37;
@@ -278,11 +245,9 @@
       transition: background-color 0.3s;
       margin: 5px;
     }
-
     .modal-content button:hover {
       background-color: #f0c05a;
     }
-
     .modal-content .close {
       position: absolute;
       top: 10px;
@@ -291,13 +256,11 @@
       cursor: pointer;
       color: #1a1a1a;
     }
-
     .error {
       color: #ff4d4d;
       margin-top: 10px;
       display: none;
     }
-
     /* Mensajes en el modal */
     .guest-message {
       background: #fffaf0;
@@ -309,76 +272,61 @@
       text-align: left;
       animation: fadeInUp 0.5s ease-out;
     }
-
     .guest-message p {
       font-size: 1.1rem;
       margin: 5px 0;
     }
-
     .guest-message .name {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       color: #d4af37;
     }
-
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
     footer {
       margin-top: 40px;
       font-size: 1.4rem;
       color: #1a1a1a;
       font-family: 'Playfair Display', serif;
     }
-
     /* Responsividad */
     @media (max-width: 768px) {
       .cover h1 {
         font-size: 3rem;
       }
-
       .content {
         margin: 20px;
         padding: 25px;
       }
-
       .guest-form input, .guest-form textarea {
         max-width: 100%;
       }
-
       .message {
         font-size: 1.8rem;
       }
-
       .modal-content {
         padding: 20px;
       }
-
       .photo-container img {
         max-width: 250px;
       }
     }
-
     @media (max-width: 480px) {
       .cover h1 {
         font-size: 2.5rem;
       }
-
       .btn, .guest-form button, .modal-content button {
         padding: 10px 20px;
         font-size: 1rem;
       }
-
       .section-title {
         font-size: 1.6rem;
       }
-
       .title-container {
         padding: 15px;
       }
-
       .photo-container img {
         max-width: 200px;
       }
@@ -425,18 +373,15 @@
     <div class="star" style="left:70%; animation-delay:3s;"></div>
     <div class="star" style="left:80%; animation-delay:3.5s;"></div>
   </div>
-
   <!-- Contenido -->
   <div class="content" id="content">
     <p class="message">
       ✨ Aremys, hoy tus 15 años iluminan nuestro mundo. Eres una estrella única, y esta nueva etapa será tan brillante como tú. ¡Que este día sea el comienzo de un camino lleno de sueños realizados!
     </p>
-
     <!-- Foto de Aremys -->
     <div class="photo-container">
       <img src="./15 años/1000518232.jpg" alt="Foto de Aremys celebrando sus 15 años">
     </div>
-
     <!-- Formulario para mensajes -->
     <div class="section-title">✍️ Comparte tu mensaje</div>
     <form class="guest-form" id="guestForm" onsubmit="submitMessage(event)">
@@ -444,21 +389,17 @@
       <textarea id="message" placeholder="Tu mensaje para Aremys..." required></textarea>
       <button type="submit">Enviar mensaje</button>
     </form>
-
     <!-- Botón para ver mensajes (solo Aremys) -->
     <div class="section-title">💌 Mensajes para Aremys</div>
     <button class="btn" onclick="openModal()">Ver mensajes (solo para Aremys)</button>
-
     <!-- Frase final -->
     <div class="section-title">🌟 Siempre brillarás</div>
     <p class="message">
       “Feliz 15 años, Aremys. Que cada paso que des esté lleno de amor, éxito y felicidad eterna.”
     </p>
-
     <!-- Firma -->
     <footer>🖊️ Con todo nuestro cariño, tus seres queridos.</footer>
   </div>
-
   <!-- Modal para contraseña -->
   <div class="modal" id="passwordModal">
     <div class="modal-content">
@@ -473,13 +414,11 @@
       <button id="downloadPdf" style="display: none;" onclick="downloadMessagesAsPDF()">Descargar mensajes en PDF</button>
     </div>
   </div>
-
   <!-- Música de fondo -->
   <audio id="background-music" autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3 " type="audio/mp3">
     Tu navegador no soporta audio.
   </audio>
-
   <script>
     const PASSWORD = 'Aremys15'; // Contraseña para Aremys
 
